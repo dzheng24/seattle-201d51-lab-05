@@ -111,12 +111,21 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
-
+var testArray=[2,3,4];
+function multiplyArray(testArray) { //eslint-disable-line
+  var allProduct = testArray.reduce(
+    (a,b) => a*b);
+  var message = 'The numbers '+  testArray + ' have a product of '+ allProduct + '.';
+  return[allProduct, message]
 }
 
-// Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+//How I figured this out: https://stackoverflow.com/questions/19175063/multiply-all-elements-in-array
+
+
+
+  
+  // Here is the test for multiplyArray(); uncomment it to run it
+  testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
